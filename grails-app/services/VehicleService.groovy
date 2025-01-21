@@ -2,6 +2,9 @@ package org.grails.guides.services
 import org.grails.guides.Make
 import org.grails.guides.Model
 import org.grails.guides.Vehicle
+import grails.gorm.transactions.Transactional
+
+@Transactional
 class VehicleService {
     def getVehicleDetails() {
         return "Example Vehicle Details"
