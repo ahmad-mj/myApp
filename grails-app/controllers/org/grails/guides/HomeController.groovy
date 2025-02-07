@@ -4,5 +4,7 @@ class HomeController {
 
  static defaultAction = "homePage"
 
-    def homePage() { } 
+    def index() { 
+    render "Welcome from HomeController"
+    } 
 }
