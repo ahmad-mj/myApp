@@ -9,9 +9,9 @@ class UrlMappings {
             }
         }
 
-        "/"(controller: 'book', action: 'index')
-        "/home"(controller: 'home')
-        "/index"(view:'/index')
+        "/"(view:'/index')
+        "/vehicle"(controller: 'vehicle')
+        "/book"(controller: 'book',)
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
