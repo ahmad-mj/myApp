@@ -6,7 +6,24 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#list-vehicle" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+    <div id="content" role="main">
+        <section class="row colset-2-its">
+            <h1>Welcome ${name}!</h1> 
+
+            <h4>${flash.message}</h4>  
+
+            <p>There are ${vehicleTotal} vehicles in the database.</p> 
+
+            <form action="/home/updateName" method="post" style="margin: 0 auto; width:320px"> 
+                <input type="text" name="name" value="" id="name">
+                <input type="submit" name="Update name" value="Update name" id="Update name">
+            </form>
+
+        </section>
+        <div id="list-vehicle" class="content scaffold-list" role="main">
+        
+    </div>
+        <%-- <a href="#list-vehicle" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -23,6 +40,6 @@
             <div class="pagination">
                 <g:paginate total="${vehicleCount ?: 0}" />
             </div>
-        </div>
+        </div> --%>
     </body>
 </html>
