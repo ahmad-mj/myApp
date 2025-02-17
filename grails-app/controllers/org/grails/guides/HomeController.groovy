@@ -2,9 +2,17 @@ package org.grails.guides
 
 class HomeController {
 
- static defaultAction = "homePage"
 
-    def index() { 
-    render "Welcome from HomeController"
-    } 
+   def index() {
+        respond([name: session.name ?: 'User', vehicleTotal: Vehicle.count()]) 
+    }
+
+    def updateName(String name) {
+        session.name = name 
+
+        flash.message = "Name has been updated" 
+
+        redirect action: 'index' 
+    }
+
 }
