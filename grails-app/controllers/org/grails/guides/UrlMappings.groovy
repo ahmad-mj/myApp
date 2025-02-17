@@ -10,6 +10,7 @@ class UrlMappings {
         }
 
         "/"(view:'/index')
+        "/home"(controller: 'home', action: 'index')
         "/vehicle"(controller: 'vehicle')
         "/book"(controller: 'book',)
         "500"(view:'/error')
