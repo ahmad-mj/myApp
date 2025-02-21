@@ -5,6 +5,9 @@ class HomeController {
 
    def index() {
         respond([name: session.name ?: 'User', vehicleTotal: Vehicle.count()]) 
+
+        def vehicles = Vehicle.list()
+        render(view:'index', model:[vehicleList: vehicles])
     }
 
     def updateName(String name) {
