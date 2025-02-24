@@ -16,4 +16,10 @@ class VehicleService {
         }
         return vehicle
     }
+     def listAllVehicles() {
+        Vehicle.list()
+    }
+     def getVehicle(Long id) {
+        Vehicle.get(id)
+    }
 }
