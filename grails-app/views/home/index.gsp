@@ -32,6 +32,15 @@
             <input type="submit" name="Update name" value="Update name" id="Update name">
         </g:form>
 
+        <h2>Add New Vehicle</h2>
+        <g:form controller="home" action="save" style="margin: 0 auto; width:320px">
+            <label>Name: <g:textField name="name" /></label><br/>
+            <label>Year: <g:textField name="year" /></label><br/>
+            <label>Make: <g:textField name="make" /></label><br/>
+            <label>Model: <g:textField name="model" /></label><br/>
+            <g:submitButton name="Create" value="Add Vehicle"/>
+        </g:form>
+
     </section>
 </div>
 
