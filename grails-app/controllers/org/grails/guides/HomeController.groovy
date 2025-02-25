@@ -19,18 +19,16 @@ class HomeController {
 
         redirect action: 'index' 
     }
+    
     def save() {
-       String name = params.name
-       String makeName = params.make
-       String modelName = params.model
-       Integer year = params.int('year')
+        String name = params.name
+        String makeName = params.make
+        String modelName = params.model
+        Integer year = params.int('year')
 
-       def make = Make.findByName(makeName) ?: new Make(name: makeName).save()
-       def model = Model.findByName(modelName) ?: new Model(name: modelName).save()
+        vehicleService.save(name, makeName, modelName, year)
 
-       vehicleService.save(name, make, model, year)
-        
-        redirect action: 'index' 
+        redirect(action: "index")
     }
 
 }
