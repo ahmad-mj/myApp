@@ -11,8 +11,5 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+    
 }

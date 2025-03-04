@@ -11,8 +11,5 @@ class ModelSpec extends Specification implements DomainUnitTest<Model> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+    
 }

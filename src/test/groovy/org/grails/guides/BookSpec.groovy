@@ -11,8 +11,13 @@ class BookSpec extends Specification implements DomainUnitTest<Book> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+ 
+
+    void "test book title is set correctly"() {
+        given : "A book instance"
+        def book = new Book(title: "Grails Guide")
+        
+        expect: "Title should be correctly assigned"
+        book.title == "Grails Guide"
     }
 }
